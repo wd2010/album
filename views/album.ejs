@@ -1,0 +1,17 @@
+<%include head%>
+<body>
+    <%include header%>   
+    <div class="container">
+        <h1>相册<%=albumName%></h1>
+        <div class="row">
+        <%for(var i=0;i<photos.length;i++){%>
+          <div class="col-xs-6 col-md-2">
+            <a href="/<%=photos[i]%>" class="thumbnail">
+              <img src="../images/wenjianjia1.jpg" height="256" width="256">
+              <p class='text-center'><%=photos[i]%></p>
+            </a>
+          </div>
+        <%}%>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,29 @@
+{
+  "name": "album",
+  "version": "1.0.0",
+  "description": "一个相册",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "ejs": "^2.5.1",
+    "formidable": "^1.0.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wd2010/album.git"
+  },
+  "keywords": [
+    "album",
+    "nodejs"
+  ],
+  "author": "wd2010",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wd2010/album/issues"
+  },
+  "homepage": "https://github.com/wd2010/album#readme"
+}
