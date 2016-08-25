@@ -9,8 +9,9 @@ app.use(express.static('./public'))
 
 // 路由
 app.get('/',router.showIndex)
+app.get('/upload',router.showUpLoad)
 app.get('/:id',router.showPhoto)
-
+app.use(router.show404)
 
 // 监听3000端口
 app.listen(3000)

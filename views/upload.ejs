@@ -1,0 +1,52 @@
+<%include head%>
+<body>
+    <%include header%>
+    <div class="container">
+        <form action="">
+            <div class="form-group">
+                <label >上传到相册</label>
+                <select name="albumNames" id="albumNames" class="form-control">
+                    <%for(var i=0;i<albumNames.length;i++){%>
+                    <option value="<%=albumNames[i]%>"><%=albumNames[i]%></option>
+                    <%}%>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="upFile">上传照片</label>
+                <input type="file"  name='upFile' id='upFile'/>
+            </div>
+            <button type="submit">上传</button>
+        </form>
+        <!-- 模态框（Modal） --> 
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+            <div class="modal-dialog"> 
+                <div class="modal-content"> 
+                    <div class="modal-header"> 
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+                        <h4 class="modal-title" id="myModalLabel">新建相册</h4> 
+                    </div> 
+                    <div class="modal-body">
+                        <form action="" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="">相册名字：</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control"  name="newAlbumName"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="">相册描述：</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="newAlbumDetail"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div> 
+                    <div class="modal-footer"> 
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> 
+                        <button type="button" class="btn btn-primary">保存</button> 
+                    </div> 
+                </div><!-- /.modal-content --> 
+            </div><!-- /.modal --> 
+        </div>
+    </div>
+</body>
