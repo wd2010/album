@@ -2,24 +2,39 @@ var file=require('../models/file.js')
 
 module.exports={
     // 相册主页
-    showIndex:function  (req,res,next) {
-        res.render('index',{
-            'album':file.getAllAlbums()
+    showIndex:function  (req,res) {
+        file.getAllAlbums(function  (err,albumNames) {
+            if (err) {
+                throw err
+            };
+            res.render('index',{
+                "album":albumNames
+            })
         })
     },
     // 上传页面
     showUpLoad:function  (req,res,next) {
-        res.render('upload',{
-            'albumNames':['A','B','C','D']
+        file.getAllAlbums(function  (err,albumNames) {
+            if (err) {
+                throw err
+            };
+            res.render('upload',{
+                'albumNames':albumNames
+            })
         })
     },
 
     // 照片页
-    showPhoto:function  (req,res,next) {
-        var albumName=req.params.id
-        res.render('album',{
-            'photos':['a','b','c','e','f','g'],
-            'albumName':albumName
+    showPhoto:function  (req,res) {
+        var albumName=req.params.id;
+        file.getPhotosByAlbumName(albumName,function  (err,photos) {
+            if (err) {
+                throw err
+            };
+            res.render('album',{
+                'photos':photos,
+                'albumName':albumName
+            })
         })
     },
     // 404页面

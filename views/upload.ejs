@@ -2,7 +2,7 @@
 <body>
     <%include header%>
     <div class="container">
-        <form action="">
+        <form action="" enctype="multipart/form-data">
             <div class="form-group">
                 <label >上传到相册</label>
                 <select name="albumNames" id="albumNames" class="form-control">
@@ -13,7 +13,10 @@
             </div>
             <div class="form-group">
                 <label for="upFile">上传照片</label>
-                <input type="file"  name='upFile' id='upFile'/>
+                <input type="file"  name='upFile' id='upFile' multiple="multiple"/>
+                <div id="upImg" style="height:80%;border:1px solid red">
+                    
+                </div>
             </div>
             <button type="submit">上传</button>
         </form>
@@ -49,4 +52,10 @@
             </div><!-- /.modal --> 
         </div>
     </div>
+    <script>
+        $("#upFile").on('change',function  () {
+            var upFiles=$("#upFile").get(0).files;
+            console.log(upFiles.name)
+        })
+    </script>
 </body>

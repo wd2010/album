@@ -4,8 +4,9 @@
   "description": "一个相册",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.14.0",
+    "connect-favicons": "git://github.com/theworkers/connect-favicons.git",
     "ejs": "^2.5.1",
+    "express": "^4.14.0",
     "formidable": "^1.0.17"
   },
   "devDependencies": {},
