@@ -1,8 +1,9 @@
 var fs=require('fs');
 // 使用module.exports对象为各属性值时出错
 exports.getAllAlbums=function  (callback) {
-        fs.readdir('./uploads/',function  (err,files) {
+        fs.readdir('./uploads',function  (err,files) {
             if (err) {
+                console.log("err is :"+err)
                 callback(err,null)
             };
             var arr=[];
@@ -24,6 +25,8 @@ exports.getAllAlbums=function  (callback) {
             }
         })
     }
+
+
 exports.getPhotosByAlbumName=function  (albumName,callback) {
     fs.readdir('./uploads/'+albumName+"/",function  (err,files) {
         if (err) {
