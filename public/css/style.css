@@ -4,6 +4,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content：flex-start;
+    height: 60vh;
 }
 .imgContainer div{
     margin: 10px;
@@ -12,4 +13,11 @@
 .imgContainer img{
     width: 100px;
     height: 100px;
+}
+.imgContainer p{
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 127px;
 }
