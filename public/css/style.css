@@ -10,11 +10,11 @@
     margin: 10px;
     border: 1px solid #eef;
 }
-.imgContainer img{
+.thumbnail img{
     width: 100px;
     height: 100px;
 }
-.imgContainer p{
+.thumbnail p{
     word-break: keep-all;
     white-space: nowrap;
     overflow: hidden;

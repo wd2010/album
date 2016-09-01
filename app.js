@@ -11,7 +11,10 @@ app.use(express.static('./uploads'))
 // 路由
 app.get('/',router.showIndex)
 app.get('/upload',router.showUpLoad)
+app.post('/up',router.doUp)
 app.get('/:id',router.showPhoto)
+
+
 app.use(router.show404)
 
 // 监听3000端口
